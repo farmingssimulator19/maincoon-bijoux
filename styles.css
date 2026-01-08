@@ -785,6 +785,41 @@ footer {
     }
 }
 
+/* Bouton Voir toute la collection */
+.voir-collection {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, rgba(107, 142, 105, 0.1), rgba(212, 165, 116, 0.1));
+    border-radius: 20px;
+}
+
+.collection-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.2rem;
+    padding: 1.2rem 3rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    box-shadow: 0 8px 25px rgba(107, 142, 105, 0.3);
+}
+
+.collection-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(107, 142, 105, 0.4);
+}
+
+.collection-btn i {
+    font-size: 1.4rem;
+}
+
+.collection-subtitle {
+    margin-top: 1rem;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .nav-links {

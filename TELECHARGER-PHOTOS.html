@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📸 Téléchargeur Photos Wix - Maincoon Bijoux</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #667eea;
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .intro {
+            text-align: center;
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .steps {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+
+        .steps h3 {
+            color: #764ba2;
+            margin-bottom: 1rem;
+        }
+
+        .steps ol {
+            margin-left: 1.5rem;
+        }
+
+        .steps li {
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+        }
+
+        .steps code {
+            background: #fff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: #e83e8c;
+            font-size: 0.9em;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .product-card {
+            border: 2px dashed #ddd;
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .product-card:hover {
+            border-color: #667eea;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card h4 {
+            color: #333;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .product-card input {
+            width: 100%;
+            padding: 0.6rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-card input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .product-card .price {
+            color: #764ba2;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .alert {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            display: none;
+        }
+
+        .alert.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .alert.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .preview {
+            margin-top: 2rem;
+            display: none;
+        }
+
+        .preview h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .preview-item {
+            text-align: center;
+        }
+
+        .preview-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .preview-item p {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>📸 Téléchargeur de Photos Wix</h1>
+        <p class="intro">
+            Récupérez les URLs de vos photos depuis votre boutique Wix et collez-les ici.<br>
+            Le script générera automatiquement le code HTML avec vos vraies photos.
+        </p>
+
+        <div class="steps">
+            <h3>🔍 Comment trouver les URLs de vos photos :</h3>
+            <ol>
+                <li>Ouvrez <a href="https://denisvidalon.wixsite.com/maincoon-bijoux/shop" target="_blank">votre
+                        boutique Wix</a></li>
+                <li>Faites <strong>Clic droit</strong> sur une photo de produit</li>
+                <li>Choisissez <strong>"Ouvrir l'image dans un nouvel onglet"</strong></li>
+                <li>Copiez l'URL qui apparaît (commence par <code>https://static.wixstatic.com/...</code>)</li>
+                <li>Collez l'URL dans le champ correspondant ci-dessous</li>
+                <li>Répétez pour les 9 produits</li>
+            </ol>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <h4>🔴 Boucles Grenat Rouge</h4>
+                <input type="url" id="grenat" placeholder="https://static.wixstatic.com/media/...">
+                <p class="price">65,00 €</p>
+            </div>
+
+            <div class="product-card">
+                <h4>💙 Puces Agate Bleue</h4>
+                <input type="url" id="agate" placeholder="https://static.wixstatic.com/media/...">
+                <p class="price">45,00 €</p>
+            </div>
+
+            <div class="product-card">
+                <h4>💛 Boucles Citrine Dorée</h4>
+                <input type="url" id="citrine" placeholder="https://static.wixstatic.com/media/...">
+                <p class="price">55,00 €</p>
+            </div>
+
+            <div class="product-card">
+                <h4>🔵 Collier Labradorite Bleue</h4>
+                <input type="url" id="labradorite" placeholder="https://static.wixstatic.com/media/...">
+                <p class="price">110,00 €</p>
+            </div>
+
+            <div class="product-card">
+                <h4>🟤 Collier Œil de Tigre</h4>
+                <input type="url" id="tigre" placeholder="https://static.wixstatic.com/media/...">
+                <p class="price">90,00 €</p>
+            </div>
+
+            <div class="product-card">
+                <h4>💗 Collier Quartz Rose</h4>
+                <input type="url" id="quartz" placeholder="https://static.wixstatic.com/media/...">
+                <p class="price">95,00 €</p>
+            </div>
+
+            <div class="product-card">
+                <h4>💚 Bracelet Aventurine Verte</h4>
+                <input type="url" id="aventurine" placeholder="https://static.wixstatic.com/media/...">
+                <p class="price">60,00 €</p>
+            </div>
+
+            <div class="product-card">
+                <h4>💜 Bracelet Améthyste Douce</h4>
+                <input type="url" id="amethyste" placeholder="https://static.wixstatic.com/media/...">
+                <p class="price">70,00 €</p>
+            </div>
+
+            <div class="product-card">
+                <h4>🔷 Bracelet Lapis Lazuli</h4>
+                <input type="url" id="lapis" placeholder="https://static.wixstatic.com/media/...">
+                <p class="price">85,00 €</p>
+            </div>
+        </div>
+
+        <div class="btn-container">
+            <button onclick="genererCode()">✨ Générer le code HTML</button>
+        </div>
+
+        <div class="alert" id="alert"></div>
+
+        <div class="preview" id="preview">
+            <h3>🎨 Aperçu de vos photos :</h3>
+            <div class="preview-grid" id="previewGrid"></div>
+        </div>
+    </div>
+
+    <script>
+        function genererCode() {
+            const urls = {
+                grenat: document.getElementById('grenat').value,
+                agate: document.getElementById('agate').value,
+                citrine: document.getElementById('citrine').value,
+                labradorite: document.getElementById('labradorite').value,
+                tigre: document.getElementById('tigre').value,
+                quartz: document.getElementById('quartz').value,
+                aventurine: document.getElementById('aventurine').value,
+                amethyste: document.getElementById('amethyste').value,
+                lapis: document.getElementById('lapis').value
+            };
+
+            const products = [
+                { id: 'amethyste', name: 'Bracelet Améthyste Douce', tag: 'Apaisement', desc: 'Pierre de sérénité et d\'équilibre. Favorise le calme intérieur et l\'intuition.', price: '70,00 €' },
+                { id: 'quartz', name: 'Collier Quartz Rose', tag: 'Amour', desc: 'Pierre de l\'amour inconditionnel. Ouvre le cœur à la tendresse et la paix intérieure.', price: '95,00 €' },
+                { id: 'citrine', name: 'Boucles Citrine Dorée', tag: 'Énergie', desc: 'Pierre de joie et d\'abondance. Stimule l\'énergie vitale et la prospérité.', price: '55,00 €' },
+                { id: 'tigre', name: 'Collier Œil de Tigre', tag: 'Protection', desc: 'Pierre de protection et de confiance en soi. Repousse les énergies négatives.', price: '90,00 €' },
+                { id: 'lapis', name: 'Bracelet Lapis Lazuli', tag: 'Sagesse', desc: 'Pierre de sagesse et de vérité. Favorise l\'expression personnelle et la clarté mentale.', price: '85,00 €' },
+                { id: 'labradorite', name: 'Collier Labradorite Bleue', tag: 'Transformation', desc: 'Pierre de transformation et de protection. Renforce l\'aura et stimule l\'intuition.', price: '110,00 €' },
+                { id: 'aventurine', name: 'Bracelet Aventurine Verte', tag: 'Chance', desc: 'Pierre de la chance et de l\'optimisme. Attire la prospérité et apaise le cœur.', price: '60,00 €' },
+                { id: 'grenat', name: 'Boucles Grenat Rouge', tag: 'Passion', desc: 'Pierre de passion et de vitalité. Renforce le courage et l\'endurance.', price: '65,00 €' },
+                { id: 'agate', name: 'Puces Agate Bleue', tag: 'Communication', desc: 'Pierre de communication et d\'expression. Apaise l\'anxiété et favorise la parole claire.', price: '45,00 €' }
+            ];
+
+            // Vérifier si toutes les URLs sont remplies
+            const emptyFields = Object.values(urls).filter(url => !url || url.trim() === '');
+            if (emptyFields.length > 0) {
+                showAlert('⚠️ Veuillez remplir toutes les URLs avant de générer le code.', 'error');
+                return;
+            }
+
+            // Générer l'aperçu
+            const previewGrid = document.getElementById('previewGrid');
+            previewGrid.innerHTML = '';
+            products.forEach(product => {
+                const url = urls[product.id];
+                previewGrid.innerHTML += `
+                    <div class="preview-item">
+                        <img src="${url}" alt="${product.name}" onerror="this.src='https://via.placeholder.com/200x200?text=Erreur'">
+                        <p>${product.name}</p>
+                    </div>
+                `;
+            });
+            document.getElementById('preview').style.display = 'block';
+
+            // Générer le code HTML
+            let htmlCode = '';
+            products.forEach(product => {
+                const url = urls[product.id];
+                const productSlug = product.name.toLowerCase()
+                    .normalize('NFD').replace(/[\u0300-\u036f]/g, '') // Enlever accents
+                    .replace(/œ/g, 'oe')
+                    .replace(/[^a-z0-9]+/g, '-')
+                    .replace(/^-+|-+$/g, '');
+
+                htmlCode += `
+                <!-- ${product.name} -->
+                <div class="product-card">
+                    <img src="${url}"
+                        alt="${product.name}" class="product-image-real">
+                    <span class="product-tag">${product.tag}</span>
+                    <h3>${product.name}</h3>
+                    <p>${product.desc}</p>
+                    <span class="price">${product.price}</span>
+                    <a href="https://denisvidalon.wixsite.com/${productSlug}" class="buy-button" target="_blank">
+                        <i class="fas fa-shopping-cart"></i> Acheter
+                    </a>
+                    <a href="https://wa.me/33XXXXXXXXX?text=Bonjour%20Maincoon%20Bijoux,%20question%20sur%20${encodeURIComponent(product.name)}"
+                        class="question-btn" target="_blank" title="Une question ?">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+`;
+            });
+
+            // Copier dans le presse-papier
+            navigator.clipboard.writeText(htmlCode).then(() => {
+                showAlert('✅ Code HTML copié dans le presse-papier ! Vous pouvez maintenant le coller dans index.html', 'success');
+                console.log('Code HTML généré :', htmlCode);
+            }).catch(() => {
+                showAlert('⚠️ Impossible de copier automatiquement. Ouvrez la console (F12) pour voir le code.', 'error');
+                console.log('Code HTML à copier :', htmlCode);
+            });
+        }
+
+        function showAlert(message, type) {
+            const alert = document.getElementById('alert');
+            alert.textContent = message;
+            alert.className = `alert ${type}`;
+            alert.style.display = 'block';
+            setTimeout(() => {
+                alert.style.display = 'none';
+            }, 5000);
+        }
+    </script>
+</body>
+
+</html>

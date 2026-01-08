@@ -1,0 +1,248 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Bracelet Améthyste Douce",
+            "slug": "bracelet-amethyste-douce",
+            "category": "bracelet",
+            "stone": "amethyste",
+            "price": 35,
+            "image": "img/Bracelet Améthyste Douce.avif",
+            "description": "Bracelet artisanal en Améthyste véritable",
+            "longDescription": "Pierre de la sérénité et de l'intuition. Favorise le calme mental, l'intuition, un sommeil réparateur et offre une protection spirituelle.",
+            "virtues": [
+                "Calme mental",
+                "Intuition développée",
+                "Sommeil réparateur",
+                "Protection spirituelle"
+            ],
+            "chakra": "Coronal (7ème)",
+            "inStock": true,
+            "featured": true
+        },
+        {
+            "id": 2,
+            "name": "Bracelet Lapis Lazuli",
+            "slug": "bracelet-lapis-lazuli",
+            "category": "bracelet",
+            "stone": "lapis-lazuli",
+            "price": 38,
+            "image": "img/Bracelet Lapis Lazuli.avif",
+            "description": "Bracelet en Lapis Lazuli authentique",
+            "longDescription": "Pierre de sagesse et de vérité. Favorise l'expression personnelle, la clarté mentale, la sagesse et stimule la créativité.",
+            "virtues": [
+                "Expression personnelle",
+                "Clarté mentale",
+                "Sagesse",
+                "Créativité"
+            ],
+            "chakra": "Gorge (5ème) et Troisième Œil (6ème)",
+            "inStock": true,
+            "featured": true
+        },
+        {
+            "id": 3,
+            "name": "Bracelet Aventurine Verte",
+            "slug": "bracelet-aventurine-verte",
+            "category": "bracelet",
+            "stone": "aventurine",
+            "price": 32,
+            "image": "img/Bracelet Aventurine Verte.avif",
+            "description": "Bracelet en Aventurine Verte naturelle",
+            "longDescription": "Pierre de la chance et de l'optimisme. Apporte prospérité, chance, calme émotionnel et équilibre du cœur.",
+            "virtues": [
+                "Prospérité",
+                "Chance",
+                "Calme émotionnel",
+                "Équilibre du cœur"
+            ],
+            "chakra": "Cœur (4ème)",
+            "inStock": true,
+            "featured": false
+        },
+        {
+            "id": 4,
+            "name": "Collier Quartz Rose",
+            "slug": "collier-quartz-rose",
+            "category": "collier",
+            "stone": "quartz-rose",
+            "price": 45,
+            "image": "img/Collier Quartz Rose.avif",
+            "description": "Collier délicat en Quartz Rose",
+            "longDescription": "Pierre de l'amour inconditionnel. Favorise l'amour de soi, la tendresse, l'apaisement émotionnel et la guérison du cœur.",
+            "virtues": [
+                "Amour de soi",
+                "Tendresse",
+                "Apaisement émotionnel",
+                "Guérison du cœur"
+            ],
+            "chakra": "Cœur (4ème)",
+            "inStock": true,
+            "featured": true
+        },
+        {
+            "id": 5,
+            "name": "Collier Labradorite Bleue",
+            "slug": "collier-labradorite-bleue",
+            "category": "collier",
+            "stone": "labradorite",
+            "price": 48,
+            "image": "img/Collier Labradorite Bleue.avif",
+            "description": "Collier en Labradorite aux reflets mystiques",
+            "longDescription": "Pierre de transformation et protection. Protège l'aura, développe l'intuition et favorise la transformation et la régénération.",
+            "virtues": [
+                "Protection de l'aura",
+                "Intuition",
+                "Transformation",
+                "Régénération"
+            ],
+            "chakra": "Tous les chakras",
+            "inStock": true,
+            "featured": true
+        },
+        {
+            "id": 6,
+            "name": "Collier Œil de Tigre",
+            "slug": "collier-oeil-de-tigre",
+            "category": "collier",
+            "stone": "oeil-de-tigre",
+            "price": 42,
+            "image": "img/Collier Œil de Tigre.avif",
+            "description": "Collier protecteur en Œil de Tigre",
+            "longDescription": "Pierre de protection et de courage. Protège contre les énergies négatives, renforce la confiance, le courage et l'ancrage.",
+            "virtues": [
+                "Protection",
+                "Confiance",
+                "Courage",
+                "Ancrage"
+            ],
+            "chakra": "Plexus solaire (3ème) et Racine (1er)",
+            "inStock": true,
+            "featured": false
+        },
+        {
+            "id": 7,
+            "name": "Boucles Citrine Dorée",
+            "slug": "boucles-citrine-doree",
+            "category": "boucles",
+            "stone": "citrine",
+            "price": 28,
+            "image": "img/Boucles Citrine Dorée.avif",
+            "description": "Boucles d'oreilles en Citrine éclatante",
+            "longDescription": "Pierre de l'abondance et de la joie. Apporte joie de vivre, énergie positive, prospérité et confiance en soi.",
+            "virtues": [
+                "Joie de vivre",
+                "Énergie positive",
+                "Prospérité",
+                "Confiance en soi"
+            ],
+            "chakra": "Plexus solaire (3ème)",
+            "inStock": true,
+            "featured": false
+        },
+        {
+            "id": 8,
+            "name": "Boucles Grenat Rouge",
+            "slug": "boucles-grenat-rouge",
+            "category": "boucles",
+            "stone": "grenat",
+            "price": 30,
+            "image": "img/Boucles Grenat Rouge.avif",
+            "description": "Boucles d'oreilles en Grenat passionné",
+            "longDescription": "Pierre de passion et de vitalité. Stimule l'énergie vitale, le courage, l'endurance, la passion et améliore la circulation sanguine.",
+            "virtues": [
+                "Énergie vitale",
+                "Courage",
+                "Endurance",
+                "Passion"
+            ],
+            "chakra": "Racine (1er)",
+            "inStock": true,
+            "featured": true
+        },
+        {
+            "id": 9,
+            "name": "Puces Agate Bleue",
+            "slug": "puces-agate-bleue",
+            "category": "boucles",
+            "stone": "agate",
+            "price": 25,
+            "image": "img/Puces Agate Bleue.avif",
+            "description": "Puces d'oreilles en Agate Bleue apaisante",
+            "longDescription": "Pierre de communication et d'apaisement. Favorise l'expression claire, apaise l'anxiété et développe la communication et la diplomatie.",
+            "virtues": [
+                "Expression claire",
+                "Apaisement de l'anxiété",
+                "Communication",
+                "Diplomatie"
+            ],
+            "chakra": "Gorge (5ème)",
+            "inStock": true,
+            "featured": false
+        }
+    ],
+    "categories": [
+        {
+            "id": "bracelet",
+            "name": "Bracelets",
+            "icon": "fa-hand-sparkles"
+        },
+        {
+            "id": "collier",
+            "name": "Colliers",
+            "icon": "fa-gem"
+        },
+        {
+            "id": "boucles",
+            "name": "Boucles d'oreilles",
+            "icon": "fa-star"
+        }
+    ],
+    "stones": [
+        {
+            "id": "amethyste",
+            "name": "Améthyste",
+            "color": "#9b59b6"
+        },
+        {
+            "id": "quartz-rose",
+            "name": "Quartz Rose",
+            "color": "#ff9a9e"
+        },
+        {
+            "id": "citrine",
+            "name": "Citrine",
+            "color": "#f9d423"
+        },
+        {
+            "id": "oeil-de-tigre",
+            "name": "Œil de Tigre",
+            "color": "#d4a574"
+        },
+        {
+            "id": "lapis-lazuli",
+            "name": "Lapis Lazuli",
+            "color": "#1e3a8a"
+        },
+        {
+            "id": "labradorite",
+            "name": "Labradorite",
+            "color": "#4a5568"
+        },
+        {
+            "id": "aventurine",
+            "name": "Aventurine Verte",
+            "color": "#6b8e69"
+        },
+        {
+            "id": "grenat",
+            "name": "Grenat",
+            "color": "#991b1b"
+        },
+        {
+            "id": "agate",
+            "name": "Agate Bleue",
+            "color": "#60a5fa"
+        }
+    ]
+}

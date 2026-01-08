@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Boutique Maincoon Bijoux - Achetez vos bijoux en pierres naturelles. Bracelets, colliers, boucles d'oreilles artisanaux faits main à Bon-Encontre.">
+    <title>Boutique - Maincoon Bijoux | Bijoux Artisanaux en Pierres Naturelles</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="boutique.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>🌙 Maincoon Bijoux</h1>
+                <p class="location">Bon-Encontre</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#bijoux">Nos Bijoux</a></li>
+                <li><a href="boutique.html" class="active">Boutique 🛒</a></li>
+                <li><a href="index.html#lithotherapie">Lithothérapie</a></li>
+                <li><a href="index.html#atelier">L'Atelier</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="cart-icon-container">
+                <button id="cartButton" class="cart-button">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span id="cartCount" class="cart-count">0</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section Boutique -->
+        <section class="boutique-hero">
+            <div class="boutique-hero-content">
+                <h1>✨ Notre Boutique</h1>
+                <p>Découvrez nos créations uniques en pierres naturelles</p>
+            </div>
+        </section>
+
+        <!-- Filtres et Recherche -->
+        <section class="filters-section">
+            <div class="filters-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Rechercher un bijou...">
+                </div>
+
+                <div class="filter-group">
+                    <label><i class="fas fa-list"></i> Catégorie :</label>
+                    <select id="categoryFilter">
+                        <option value="all">Toutes les catégories</option>
+                        <option value="bracelet">Bracelets</option>
+                        <option value="collier">Colliers</option>
+                        <option value="boucles">Boucles d'oreilles</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label><i class="fas fa-gem"></i> Pierre :</label>
+                    <select id="stoneFilter">
+                        <option value="all">Toutes les pierres</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label><i class="fas fa-sort"></i> Trier par :</label>
+                    <select id="sortFilter">
+                        <option value="featured">Mis en avant</option>
+                        <option value="price-asc">Prix croissant</option>
+                        <option value="price-desc">Prix décroissant</option>
+                        <option value="name">Nom A-Z</option>
+                    </select>
+                </div>
+
+                <button id="resetFilters" class="reset-button">
+                    <i class="fas fa-redo"></i> Réinitialiser
+                </button>
+            </div>
+        </section>
+
+        <!-- Grille de produits -->
+        <section class="products-section">
+            <div id="productsGrid" class="products-grid">
+                <!-- Les produits seront chargés ici dynamiquement -->
+                <div class="loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Chargement des produits...</p>
+                </div>
+            </div>
+
+            <div id="noResults" class="no-results" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>Aucun produit trouvé</h3>
+                <p>Essayez de modifier vos filtres de recherche</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Panier Latéral -->
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2><i class="fas fa-shopping-bag"></i> Mon Panier</h2>
+            <button id="closeCart" class="close-cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div id="cartItems" class="cart-items">
+            <!-- Les articles du panier seront affichés ici -->
+        </div>
+
+        <div id="cartEmpty" class="cart-empty">
+            <i class="fas fa-shopping-bag"></i>
+            <p>Votre panier est vide</p>
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total :</span>
+                <span id="cartTotal" class="total-price">0,00 €</span>
+            </div>
+            <button id="checkoutButton" class="checkout-button">
+                <i class="fas fa-lock"></i> Commander
+            </button>
+            <p class="cart-reassurance">
+                <i class="fas fa-shield-alt"></i> Paiement 100% sécurisé
+            </p>
+        </div>
+    </div>
+
+    <!-- Overlay du panier -->
+    <div id="cartOverlay" class="cart-overlay"></div>
+
+    <!-- Modal Produit -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="modalBody" class="modal-body">
+                <!-- Le contenu du produit sera chargé ici -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>🌙 Maincoon Bijoux</h3>
+                <p>Bijoux artisanaux & Lithothérapie</p>
+                <p><i class="fas fa-map-marker-alt"></i> Bon-Encontre, Lot-et-Garonne (47)</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="boutique.html">Boutique</a></li>
+                    <li><a href="index.html#lithotherapie">Lithothérapie</a></li>
+                    <li><a href="index.html#atelier">L'Atelier</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-footer">
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Maincoon Bijoux - Créations artisanales avec passion</p>
+            <p class="reassurance">🔒 Paiement sécurisé | 📦 Livraison suivie | ♻️ Emballage éco-responsable</p>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+    <script src="boutique.js"></script>
+</body>
+
+</html>

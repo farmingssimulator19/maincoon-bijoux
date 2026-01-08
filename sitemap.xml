@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+    <!-- Page d'accueil -->
+    <url>
+        <loc>https://farmingssimulator19.github.io/maincoon-bijoux/</loc>
+        <lastmod>2026-01-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://farmingssimulator19.github.io/maincoon-bijoux/img/Collier%20Quartz%20Rose.avif</image:loc>
+            <image:title>Collier Quartz Rose</image:title>
+        </image:image>
+    </url>
+
+    <!-- Page Boutique -->
+    <url>
+        <loc>https://farmingssimulator19.github.io/maincoon-bijoux/boutique.html</loc>
+        <lastmod>2026-01-08</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://farmingssimulator19.github.io/maincoon-bijoux/img/Bracelet%20Am%C3%A9thyste%20Douce.avif</image:loc>
+            <image:title>Bracelet Améthyste Douce</image:title>
+        </image:image>
+    </url>
+
+    <!-- Images produits -->
+    <url>
+        <loc>https://farmingssimulator19.github.io/maincoon-bijoux/img/</loc>
+        <lastmod>2026-01-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+        <image:image>
+            <image:loc>https://farmingssimulator19.github.io/maincoon-bijoux/img/Boucles%20Grenat%20Rouge.avif</image:loc>
+            <image:title>Boucles Grenat Rouge</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://farmingssimulator19.github.io/maincoon-bijoux/img/Boucles%20Citrine%20Dor%C3%A9e.avif</image:loc>
+            <image:title>Boucles Citrine Dorée</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://farmingssimulator19.github.io/maincoon-bijoux/img/Puces%20Agate%20Bleue.avif</image:loc>
+            <image:title>Puces Agate Bleue</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://farmingssimulator19.github.io/maincoon-bijoux/img/Collier%20Labradorite%20Bleue.avif</image:loc>
+            <image:title>Collier Labradorite Bleue</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://farmingssimulator19.github.io/maincoon-bijoux/img/Collier%20%C5%92il%20de%20Tigre.avif</image:loc>
+            <image:title>Collier Œil de Tigre</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://farmingssimulator19.github.io/maincoon-bijoux/img/Bracelet%20Aventurine%20Verte.avif</image:loc>
+            <image:title>Bracelet Aventurine Verte</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://farmingssimulator19.github.io/maincoon-bijoux/img/Bracelet%20Lapis%20Lazuli.avif</image:loc>
+            <image:title>Bracelet Lapis Lazuli</image:title>
+        </image:image>
+    </url>
+
+</urlset>

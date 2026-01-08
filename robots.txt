@@ -1,0 +1,24 @@
+# robots.txt pour Maincoon Bijoux
+# https://farmingssimulator19.github.io/maincoon-bijoux/
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://farmingssimulator19.github.io/maincoon-bijoux/sitemap.xml
+
+# Dossiers à indexer en priorité
+Allow: /img/
+Allow: /*.html
+Allow: /*.css
+Allow: /*.js
+
+# Fichiers à ne pas indexer
+Disallow: /products.json
+Disallow: /cart.js
+Disallow: /boutique.js
+Disallow: /boutique.css
+Disallow: /*.md
+
+# Crawl-delay (optionnel)
+Crawl-delay: 10

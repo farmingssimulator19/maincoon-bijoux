@@ -8,8 +8,29 @@
         content="Boutique Maincoon Bijoux - Achetez vos bijoux en pierres naturelles. Bracelets, colliers, boucles d'oreilles artisanaux faits main à Bon-Encontre.">
     <title>Boutique - Maincoon Bijoux | Bijoux Artisanaux en Pierres Naturelles</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="boutique.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Style pour l'iframe de la boutique */
+        .boutique-iframe-container {
+            width: 100%;
+            min-height: 100vh;
+            padding: 0;
+            margin: 0;
+            background: #faf9f7;
+        }
+
+        .boutique-iframe-container iframe {
+            display: block;
+            width: 100%;
+            min-height: 2000px;
+            border: none;
+        }
+
+        /* Masquer le pied de page si nécessaire */
+        body.boutique-page footer {
+            margin-top: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,129 +48,17 @@
                 <li><a href="index.html#atelier">L'Atelier</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
             </ul>
-            <div class="cart-icon-container">
-                <button id="cartButton" class="cart-button">
-                    <i class="fas fa-shopping-bag"></i>
-                    <span id="cartCount" class="cart-count">0</span>
-                </button>
-            </div>
         </nav>
     </header>
 
     <main>
-        <!-- Hero Section Boutique -->
-        <section class="boutique-hero">
-            <div class="boutique-hero-content">
-                <h1>✨ Notre Boutique</h1>
-                <p>Découvrez nos créations uniques en pierres naturelles</p>
-            </div>
-        </section>
-
-        <!-- Filtres et Recherche -->
-        <section class="filters-section">
-            <div class="filters-container">
-                <div class="search-box">
-                    <i class="fas fa-search"></i>
-                    <input type="text" id="searchInput" placeholder="Rechercher un bijou...">
-                </div>
-
-                <div class="filter-group">
-                    <label><i class="fas fa-list"></i> Catégorie :</label>
-                    <select id="categoryFilter">
-                        <option value="all">Toutes les catégories</option>
-                        <option value="bracelet">Bracelets</option>
-                        <option value="collier">Colliers</option>
-                        <option value="boucles">Boucles d'oreilles</option>
-                    </select>
-                </div>
-
-                <div class="filter-group">
-                    <label><i class="fas fa-gem"></i> Pierre :</label>
-                    <select id="stoneFilter">
-                        <option value="all">Toutes les pierres</option>
-                    </select>
-                </div>
-
-                <div class="filter-group">
-                    <label><i class="fas fa-sort"></i> Trier par :</label>
-                    <select id="sortFilter">
-                        <option value="featured">Mis en avant</option>
-                        <option value="price-asc">Prix croissant</option>
-                        <option value="price-desc">Prix décroissant</option>
-                        <option value="name">Nom A-Z</option>
-                    </select>
-                </div>
-
-                <button id="resetFilters" class="reset-button">
-                    <i class="fas fa-redo"></i> Réinitialiser
-                </button>
-            </div>
-        </section>
-
-        <!-- Grille de produits -->
-        <section class="products-section">
-            <div id="productsGrid" class="products-grid">
-                <!-- Les produits seront chargés ici dynamiquement -->
-                <div class="loading">
-                    <i class="fas fa-spinner fa-spin"></i>
-                    <p>Chargement des produits...</p>
-                </div>
-            </div>
-
-            <div id="noResults" class="no-results" style="display: none;">
-                <i class="fas fa-search"></i>
-                <h3>Aucun produit trouvé</h3>
-                <p>Essayez de modifier vos filtres de recherche</p>
-            </div>
+        <!-- Boutique Wix intégrée -->
+        <section class="boutique-iframe-container">
+            <iframe src="https://denisvidalon.wixsite.com/maincoon-bijoux/shop" width="100%" height="2000"
+                frameborder="0" scrolling="yes" title="Boutique Maincoon Bijoux" allow="payment" loading="lazy">
+            </iframe>
         </section>
     </main>
-
-    <!-- Panier Latéral -->
-    <div id="cartSidebar" class="cart-sidebar">
-        <div class="cart-header">
-            <h2><i class="fas fa-shopping-bag"></i> Mon Panier</h2>
-            <button id="closeCart" class="close-cart">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-
-        <div id="cartItems" class="cart-items">
-            <!-- Les articles du panier seront affichés ici -->
-        </div>
-
-        <div id="cartEmpty" class="cart-empty">
-            <i class="fas fa-shopping-bag"></i>
-            <p>Votre panier est vide</p>
-        </div>
-
-        <div class="cart-footer">
-            <div class="cart-total">
-                <span>Total :</span>
-                <span id="cartTotal" class="total-price">0,00 €</span>
-            </div>
-            <button id="checkoutButton" class="checkout-button">
-                <i class="fas fa-lock"></i> Commander
-            </button>
-            <p class="cart-reassurance">
-                <i class="fas fa-shield-alt"></i> Paiement 100% sécurisé
-            </p>
-        </div>
-    </div>
-
-    <!-- Overlay du panier -->
-    <div id="cartOverlay" class="cart-overlay"></div>
-
-    <!-- Modal Produit -->
-    <div id="productModal" class="modal">
-        <div class="modal-content">
-            <button class="modal-close">
-                <i class="fas fa-times"></i>
-            </button>
-            <div id="modalBody" class="modal-body">
-                <!-- Le contenu du produit sera chargé ici -->
-            </div>
-        </div>
-    </div>
 
     <footer>
         <div class="footer-content">
@@ -181,9 +90,6 @@
             <p class="reassurance">🔒 Paiement sécurisé | 📦 Livraison suivie | ♻️ Emballage éco-responsable</p>
         </div>
     </footer>
-
-    <script src="cart.js"></script>
-    <script src="boutique.js"></script>
 </body>
 
 </html>

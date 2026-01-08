@@ -9,12 +9,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 block: 'start'
             });
             // Fermer le menu mobile après clic
-            const navLinks = document.getElementById('navLinks');
-            const menuToggle = document.getElementById('menuToggle');
-            if (navLinks && navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-                menuToggle.classList.remove('active');
-            }
+            closeMenu();
         }
     });
 });
@@ -22,22 +17,51 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Menu hamburger mobile
 const menuToggle = document.getElementById('menuToggle');
 const navLinks = document.getElementById('navLinks');
+const menuOverlay = document.getElementById('menuOverlay');
+
+function closeMenu() {
+    if (navLinks && menuToggle && menuOverlay) {
+        navLinks.classList.remove('active');
+        menuToggle.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
+function openMenu() {
+    if (navLinks && menuToggle && menuOverlay) {
+        navLinks.classList.add('active');
+        menuToggle.classList.add('active');
+        menuOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
 
 if (menuToggle) {
-    menuToggle.addEventListener('click', function () {
-        this.classList.toggle('active');
-        navLinks.classList.toggle('active');
+    menuToggle.addEventListener('click', function (e) {
+        e.stopPropagation();
+        if (navLinks.classList.contains('active')) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
     });
 
-    // Fermer le menu si on clique en dehors
-    document.addEventListener('click', function (event) {
-        const isClickInsideNav = navLinks.contains(event.target);
-        const isClickOnToggle = menuToggle.contains(event.target);
+    // Fermer le menu en cliquant sur l'overlay
+    if (menuOverlay) {
+        menuOverlay.addEventListener('click', closeMenu);
+    }
 
-        if (!isClickInsideNav && !isClickOnToggle && navLinks.classList.contains('active')) {
-            navLinks.classList.remove('active');
-            menuToggle.classList.remove('active');
+    // Fermer le menu avec la touche Escape
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+            closeMenu();
         }
+    });
+
+    // Fermer le menu lors du clic sur un lien
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeMenu);
     });
 }
 

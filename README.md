@@ -1,16 +1,32 @@
 # 🌙 Maincoon Bijoux
 
-Site web officiel de Maincoon Bijoux - Créations artisanales et lithothérapie.
+Site web officiel de Maincoon Bijoux - Créations artisanales et lithothérapie basées à Bon-Encontre (47).
 
 ## 🎯 À propos
 
-Maincoon Bijoux propose des bijoux artisanaux uniques créés avec passion, en mettant en avant les bienfaits de la lithothérapie.
+Maincoon Bijoux propose des bijoux artisanaux uniques créés avec passion, en mettant en avant les bienfaits de la lithothérapie. Chaque pièce est montée à la main avec des pierres naturelles authentiques.
 
-## 🚀 Technologies utilisées
+## 🏗️ Architecture Hybride
 
-- HTML5
-- CSS3 (avec animations)
-- JavaScript (vanilla)
+Ce site utilise une **approche hybride innovante** :
+
+- **🎨 Site vitrine** : Hébergé gratuitement sur GitHub Pages (rapide, moderne, SEO-optimisé)
+- **� Boutique & Paiement** : Gérés par Wix (sécurisé, gestion de stock, emails automatiques)
+
+### Avantages de cette approche :
+✅ **Coût réduit** : Hébergement gratuit GitHub + frais Wix uniquement sur les ventes
+✅ **Performance** : Site ultra-rapide sur GitHub
+✅ **Sécurité** : Paiements certifiés PCI-DSS via Wix
+✅ **Flexibilité** : Contrôle total du design sur GitHub
+✅ **Professionnalisme** : Pas de pub "Créé avec Wix"
+
+## �🚀 Technologies utilisées
+
+- **HTML5** - Structure sémantique
+- **CSS3** - Design Boho-Chic minimaliste avec animations
+- **JavaScript** (vanilla) - Interactions fluides
+- **Font Awesome** - Icônes professionnelles
+- **Wix E-commerce** - Système de paiement sécurisé
 
 ## 📦 Installation locale
 
